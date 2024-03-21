@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxia Impresionante</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #000033, #330033, #330000, #330033, #000033);
+            /* Puedes ajustar los colores para reflejar los tonos de una galaxia real */
+        }
+
+        .galaxy {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        .sun {
+            position: absolute;
+            background-color: #ffcc00; /* Amarillo */
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            top: calc(50% - 20px);
+            left: calc(50% - 20px);
+            animation: pulse 3s ease-in-out infinite alternate; /* Animación de pulso */
+        }
+
+        @keyframes pulse {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0.8;
+            }
+        }
+
+        .planet {
+            position: absolute;
+            border-radius: 50%;
+            animation: orbit 10s linear infinite, shine 3s ease-in-out infinite alternate; /* Animación de órbita y brillo */
+        }
+
+        @keyframes orbit {
+            from {
+                transform-origin: calc(50% - 200px) calc(50% - 100px);
+                transform: rotate(0deg) translateX(200px) rotate(0deg);
+            }
+            to {
+                transform-origin: calc(50% - 200px) calc(50% - 100px);
+                transform: rotate(360deg) translateX(200px) rotate(-360deg);
+            }
+        }
+
+        @keyframes shine {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0.5;
+            }
+        }
+
+        .mercury {
+            background-color: #dcdcdc; /* Gris claro */
+            width: 10px;
+            height: 10px;
+            animation-duration: 2s; /* Ajustar la duración de la órbita */
+        }
+
+        .venus {
+            background-color: #ffcc66; /* Amarillo-naranja */
+            width: 14px;
+            height: 14px;
+            animation-duration: 3s;
+        }
+
+        .earth {
+            background-color: #0099ff; /* Azul */
+            width: 16px;
+            height: 16px;
+            animation-duration: 4s;
+        }
+
+        .mars {
+            background-color: #ff3300; /* Rojo */
+            width: 12px;
+            height: 12px;
+            animation-duration: 5s;
+        }
+
+        .moon {
+            background-color: #d3d3d3; /* Gris */
+            width: 5px;
+            height: 5px;
+            animation: moon-orbit 3s linear infinite; /* Animación de órbita lunar */
+        }
+
+        @keyframes moon-orbit {
+            from {
+                transform-origin: calc(50% - 30px) calc(50% - 15px);
+                transform: rotate(0deg) translateX(30px) rotate(0deg);
+            }
+            to {
+                transform-origin: calc(50% - 30px) calc(50% - 15px);
+                transform: rotate(360deg) translateX(30px) rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="galaxy">
+        <!-- Sol -->
+        <div class="sun"></div>
+        <!-- Planetas -->
+        <div class="planet mercury" style="top: 50%; left: 50%;"></div>
+        <div class="planet venus" style="top: 50%; left: 50%;"></div>
+        <div class="planet earth" style="top: 50%; left: 50%;"></div>
+        <div class="planet mars" style="top: 50%; left: 50%;"></div>
+        <!-- Luna -->
+        <div class="moon" style="top: 58%; left: 63%;"></div>
+        <!-- Más elementos de la galaxia aquí -->
+    </div>
+</body>
+</html>
